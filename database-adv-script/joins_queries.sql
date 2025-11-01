@@ -24,6 +24,8 @@ LEFT JOIN
     Review
 ON 
     Property.property_id = Review.property_id
+ORDER BY
+    Property.property_id;
 
 SELECT
     SELECT 
