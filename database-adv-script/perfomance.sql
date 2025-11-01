@@ -19,7 +19,8 @@ ON
 JOIN
     Users
 ON 
-    Users.user_id = Property.user_id;
+    Users.user_id = Property.user_id
+WHERE Payment.amount > 100.00 AND Users.role_id = 2;
 
 CREATE INDEX idx_booking_property ON Booking(property_id);
 CREATE INDEX idx_users_email ON Users(email);
