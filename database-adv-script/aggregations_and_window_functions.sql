@@ -11,5 +11,8 @@ SELECT
     RANK() OVER (
         ORDER BY COUNT(booking_id) DESC AS rank
     )
+    ROW_NUMBER() OVER (
+        ORDER BY COUNT(booking_id) DESC AS row_num
+    )
 FROM Booking
 GROUP BY property_id;
